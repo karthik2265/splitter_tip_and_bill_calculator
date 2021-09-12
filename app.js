@@ -16,9 +16,9 @@ let noOfPeople = 0
 
 
 function calculate(bill, tipPercentage, noOfPeople) {
-  total_per_person = (bill/noOfPeople).toFixed(2)
   total_tip = (tipPercentage * bill)/100
   tip_per_person = (total_tip/noOfPeople).toFixed(2)
+  total_per_person = ((bill/noOfPeople) + parseInt(tip_per_person)).toFixed(2)
   total.textContent = '$' + total_per_person
   tip_amount.textContent = '$' + tip_per_person
 }
