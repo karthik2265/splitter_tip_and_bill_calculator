@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <div class="logo"></div>
+
+  <div class="container">
+      <form class="card card--form">
+        <div class="form__input">
+          <div class="form__control">
+            <label for="bill">Bill</label>
+            <label class="invalid-input invalid-input--bill">Invalid input</label>
+          </div>
+          <div class="form--svg">
+            <input type="text" id="bill" placeholder="0">
+            <div class="svg dollar-svg"></div>
+          </div>
+        </div>
+        <div class="form__input form__input--tip-percentage-div">
+          <div class="form__control">
+            <label>Select Tip %</label>
+            <label class="invalid-input invalid-input--tip-percentage">Invalid input</label>
+          </div>
+          <div class="tip-percentage-buttons-div">
+            <input type="button" value='5%'>
+            <input type="button" value='10%'>
+            <input type="button" value='15%'>
+            <input type="button" value='25%'>
+            <input type="button" value='50%'>
+            <input type="text" class='custom-input' placeholder='Custom' class="custom-button">
+          </div>
+        </div>
+        <div class="form__input form__input--last">
+          <div class="form__control">
+            <label for="number-of-people">Number of People</label>
+            <label class="invalid-input invalid-input--number-of-people">Invalid input</label>
+          </div>
+          <div class="form--svg">
+            <input type="text" id="number-of-people" placeholder="0">
+            <div class="svg person-svg"></div>
+          </div>
+        </div>
+      </form>
+    <div class="card card--2">
+      <div class="tip-amount-container">
+        <div class="tip-amount-div">
+          <p class="tip-amount-word">Tip Amount</p>
+          <p class="per-person">/ Person</p>
+        </div>
+        <div><span class="tip-amount">$0.00</span> </div>
+      </div>
+      <div class="total-container">
+        <div class="total-div">
+          <p class="total-word">Total</p>
+          <p class="per-person">/ Person</p>
+        </div>
+        <div><span class="total">$0.00</span> </div>
+      </div>
+      <div class="reset">RESET</div>
+    </div>
+  </div>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.linkedin.com/in/karthik-suryadevara-4528b0194">karthik suryadevara</a>.
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

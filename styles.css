@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --light-green: hsl(165, 56%, 53%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --dark-grayish-cyan-2: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --light-grayish-cyan-2: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 24px;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-grayish-cyan);
+  font-family: 'Space Mono', monospace;
+  ;
+  padding: 1rem;
+}
+
+.logo {
+  background-image: url(./images/logo.svg);
+  width: 90px;
+  height: 60px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.container {
+  background-color: var(--light-grayish-cyan-2);
+  border-radius: 0.4rem;
+  padding: 1.3rem;
+  width: 65vw;
+  margin: 1.8rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  /* border: 1px solid black; */
+  width: 48%;
+  /* padding: 0.5rem; */
+}
+
+label {
+  font-size: 0.8rem;
+}
+
+input {
+  text-align: end;
+  padding: 0.2rem 0.4rem;
+  font-size: 1rem;
+}
+
+.tip-percentage-buttons-div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30vw;
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+.form__input input {
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  border: 2px solid transparent;
+  background-color: var(--light-grayish-cyan);
+  border-radius: 0.2rem;
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+}
+
+.form__input input:focus {
+  border: 2px solid var(--very-dark-cyan);
+  /* color: var(--very-dark-cyan); */
+  /* font-weight: 700; */
+}
+
+.tip-percentage-buttons-div input {
+  box-sizing: border-box;
+  width: 30%;
+  text-align: center;
+  margin-top: 0.5rem;
+  background-color: var(--very-dark-cyan);
+  color: white;
+  cursor: pointer;
+}
+
+
+
+.form__input {
+  margin-bottom: 1rem;
+  ;
+}
+
+.form__input--last {
+  margin-bottom: 0;
+}
+
+label {
+  color: var(--dark-grayish-cyan);
+  font-weight: 700;
+}
+
+.tip-percentage-buttons-div .custom-button {
+  background-color: var(--light-grayish-cyan);
+  font-weight: 700;
+  color: var(--very-dark-cyan);
+}
+
+.card--2 {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0.4rem;
+  padding: 1rem;
+  padding-top: 2rem;
+  box-sizing: border-box;
+}
+
+.card--2 p {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.tip-amount-container,
+.total-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tip-amount-container {
+  margin-bottom: 1.5rem;
+}
+
+
+.total-word,
+.tip-amount-word {
+  color: white;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.per-person {
+  color: var(--dark-grayish-cyan);
+  font-weight: 700;
+  font-size: 0.6rem;
+}
+
+.reset {
+  width: 100%;
+  text-align: center;
+  background-color: var(--light-green);
+  border-radius: 0.2rem;
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+  margin-top: 4rem;
+  cursor: pointer;
+}
+
+.tip-amount,
+.total {
+  color: var(--light-green);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.form__control {
+  display: flex;
+  justify-content: space-between;
+}
+
+.invalid-input {
+  font-weight: 700;
+  font-size: 0.6rem;
+  color: orange;
+  display: none;
+}
+
+.dollar-svg {
+  background-image: url(./images/icon-dollar.svg);
+}
+
+.person-svg {
+  background-image: url(./images/icon-person.svg);
+}
+
+.svg {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-repeat: no-repeat;
+}
+
+.form--svg {
+  position: relative;
+}
+
+
+
+.invalid_input {
+  border: 2px solid orange !important;
+
+}
+
+input.active {
+  background-color: var(--light-green);
+  color: var(--very-dark-cyan);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 90vw;
+    ;
+    /* background-color: green; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .card--2 {
+    margin-top: 1rem;
+  }
+}
